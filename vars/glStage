@@ -1,0 +1,13 @@
+def call(Clojure steps) {
+    stage("stage_name") {
+        steps {
+            gitlabCommitStatus("stage_name") {
+              script {
+                sh """
+                    echo "clone repo"
+                """
+            }
+            }
+        }
+    }
+}
